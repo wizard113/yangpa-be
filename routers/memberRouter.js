@@ -22,7 +22,7 @@ router.post('/sign-up', async (req, res, next) => {
     res.status(201).json({
       success: true,
       member: result,
-      message: '회원가입이 완료되었습니다.',
+      message: '회원가입이 완료되었습니다. v1',
     });
   } catch (err) {
     next(err, req, res);
@@ -48,7 +48,7 @@ router.post('/sign-in', async (req, res, next) => {
             userName,
             userName: result.userName,
           },
-          message: '로그인에 성공했습니다.',
+          message: '로그인에 성공했습니다. ',
         });
       } else {
         res.status(401).json({
